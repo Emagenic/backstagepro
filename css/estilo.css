@@ -227,6 +227,84 @@ footer #contenedor_footer a:hover{
 	width: 270px;
 	margin: 0 45px;
 }
+#contacto_contenido input, #contacto_contenido textarea{
+	display: block;
+}
+#contenedor_bienvenidos #contacto_contenido{
+	width: 1000px;
+	height: auto;
+	min-height: 250px;
+	margin: auto;
+	padding: 20px 0;
+	text-align: center;
+}
+#contacto_contenido .input{
+	width: 400px;
+	height: 25px;
+	margin: 0 auto 20px auto;
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 500;
+	font-size: 14px;
+	padding-left: 10px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	color: #666;
+}
+#contacto_contenido textarea{
+	width: 400px;
+	height: 100px;
+	margin: 0 auto 20px auto;
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 500;
+	font-size: 14px;
+	padding-left: 10px;
+	padding-top: 5px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	color: #666;
+}
+#contacto_contenido .enviar{
+	background-color: black;
+	border-radius: 50%;
+	border: 5px solid #333;
+	color: #fff;
+	display: inline-block;
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 700;
+	font-size: 16px;
+	height: 30px;
+	padding-left: 10px;
+	text-decoration: none;
+	width: 100px;
+	height: 100px;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+#contacto_contenido .enviar:hover{
+	background-color: #0a0a0a;
+	border-radius: 50%;
+	border: 5px solid #0a0a0a;
+	color: #999;
+	display: inline-block;
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 700;
+	font-size: 16px;
+	height: 30px;
+	padding-left: 10px;
+	text-decoration: none;
+	width: 100px;
+	height: 100px;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
 .destacado h2{
 	font-family: ' Roboto ', sans-serif ;
 	font-weight: 700;

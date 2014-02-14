@@ -1,12 +1,32 @@
+body{
+	background-color: 
+	font-family: ' Roboto ', sans-serif ;
+	font-size: 16px;
+}
 header #banner {
   width: 100%;
   height: 600px;
+}
+header #banner_secciones{
+  width: 100%;
+  height: 350px;
 }
 header #banner .headerimg { 
   background-position: center top; 
   background-repeat: no-repeat; 
   width:100%; 
   height: 600px; 
+  position:absolute; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+header #banner_secciones .headerimg { 
+  background-position: center top; 
+  background-repeat: no-repeat; 
+  width:100%; 
+  height: 350px; 
   position:absolute; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -26,32 +46,29 @@ header #contenedorsup nav {
 	display: inline-block;
 }
 header #contenedorsup{
-	border: 1px solid red;
 	margin: auto;
 	width: 1000px;
 	height: 100px;
 }
-header c nav {
-	display: inline-block;
-}
 header #contenedorsup nav {
 	display: inline-block;
 }
 header #contenedorsup nav {
-	height: 40px;
+	margin-left: 25px; 
+	height: 65px;
 	vertical-align: top;
 }
 header #contenedorsup nav ul {
-	height: 40px;
+	height: 65px;
 	vertical-align: top;
-	margin-top: 0;
+	margin-top: 5px;
 }
 header #contenedorsup nav ul li {
-	border: 1px solid red;
 	display: inline;
-	font-weight: 40;
+	font-weight: 45;
 	line-height: 100px;
 	padding: 0 15px;
+	margin: 0 5px;
 	vertical-align: top;
 }
 header #contenedorsup nav ul li:hover {
@@ -65,11 +82,87 @@ header #contenedorsup nav ul li a {
 	color: white;
 	font-family: times;
 	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 header #contenedorsup nav ul li a:hover {
 	color: gray;
 	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
-#facebook, #twitter{
+header #facebook, #twitter{
+	float: right;
+	margin: 30px 0 10px 25px;
 	display: inline-block;
+}
+header #separador{
+	margin-top: -6px;
+}
+header #imagencentroslide{
+	width: 334px;
+	margin: 65px auto;
+}
+#contenedor_bienvenidos{
+	border: 1px solid blue;
+	width: 1000px;
+	height: auto;
+	min-height: 250px;
+	margin: auto;
+	padding-bottom: 15px;
+}
+#contenedor_bienvenidos #foto_bienvenidos img{
+	border-radius: 50%;
+	float: left;
+	border: 5px solid #666;
+	margin-bottom: 15px;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+#contenedor_bienvenidos #foto_bienvenidos img:hover{
+	border-radius: 50%;
+	float: left;
+	border: 5px solid #999;
+	margin-bottom: 15px;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+#contenedor_bienvenidos h1{
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 700;
+	font-size: 24px;
+	float: right;
+	color: #333;
+	margin-top: 0;
+	text-align: center;
+	width: 620px;
+}
+#contenedor_bienvenidos p{
+	font-family: ' Roboto ', sans-serif ;
+	font-size: 14px;
+	font-weight: 500;
+	float: right;
+	color: #999;
+	text-align: center;
+	width: 620px;
+}
+#contenedordestacado{
+	border: 1px solid blue;
+	width: 1100px;
+	height: auto;
+	min-height: 400px;
+	margin: auto;
+	text-align: center;
 }

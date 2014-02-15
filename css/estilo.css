@@ -165,6 +165,66 @@ footer #contenedor_footer a:hover{
 	height: 70px;
 	margin: auto;
 }
+#contenedor_ubicacion{
+	width: 1000px;
+	height: auto;
+	text-align: center;
+	min-height: 250px;
+	margin: auto;
+	padding: 20px 0;
+}
+#contenedor_ubicacion a{
+	background-color: black;
+	border-radius: 50%;
+	border: 5px solid #333;
+	color: #fff;
+	margin-top: 15px;
+	padding: 28px 5px 28px 5px;
+	display: inline-block;
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 700;
+	font-size: 16px;
+	height: 30px;
+	text-decoration: none;
+	width: 100px;
+	height: 50px;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+#contenedor_ubicacion a:hover{
+	background-color: #0a0a0a;
+	border-radius: 50%;
+	border: 5px solid #0a0a0a;
+	color: #999;
+	margin-top: 15px;
+	padding: 28px 5px 28px 5px;
+	display: inline-block;
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 700;
+	font-size: 16px;
+	height: 30px;
+	text-decoration: none;
+	width: 100px;
+	height: 50px;
+	-webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+#contenedor_ubicacion h1{
+	font-family: ' Roboto ', sans-serif ;
+	font-weight: 700;
+	font-size: 24px;
+	float: right;
+	color: #333;
+	margin-top: 0;
+	text-align: center;
+	width: 1000px;
+}
 #contenedor_bienvenidos #foto_bienvenidos img{
 	border-radius: 50%;
 	float: left;
@@ -275,7 +335,6 @@ footer #contenedor_footer a:hover{
 	font-weight: 700;
 	font-size: 16px;
 	height: 30px;
-	padding-left: 10px;
 	text-decoration: none;
 	width: 100px;
 	height: 100px;
@@ -295,7 +354,6 @@ footer #contenedor_footer a:hover{
 	font-weight: 700;
 	font-size: 16px;
 	height: 30px;
-	padding-left: 10px;
 	text-decoration: none;
 	width: 100px;
 	height: 100px;
@@ -304,6 +362,10 @@ footer #contenedor_footer a:hover{
     -ms-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
+}
+#contenido_ubicacion{
+	border: 1px solid #ccc;
+	border-radius: 15px;
 }
 .destacado h2{
 	font-family: ' Roboto ', sans-serif ;

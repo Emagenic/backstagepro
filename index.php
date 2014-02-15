@@ -1,3 +1,18 @@
+<?php include("Conexion.php"); 
+
+	
+	$listado = "select * from inicio";
+	$sentencia = mysql_query($listado,$conn);
+	if($rs=mysql_fetch_array($sentencia,$mibase)){
+		$descripcion = str_replace("\r\n","<br>",$rs["descripcion"]);
+		$destacado1 = str_replace("\r\n","<br>",$rs["destacado1"]);
+		$destacado2 = str_replace("\r\n","<br>",$rs["destacado2"]);
+		$destacado3 = str_replace("\r\n","<br>",$rs["destacado3"]);
+		$desdestacado3 = str_replace("\r\n","<br>",$rs["desdestacado3"]);
+		$desdestacado2 = str_replace("\r\n","<br>",$rs["desdestacado2"]);
+		$desdestacado1 = str_replace("\r\n","<br>",$rs["desdestacado1"]);
+	}
+?>
 <!doctype html>
 <html>
 <head>
@@ -20,11 +35,11 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="index.html">INICIO</a></li>
-								<li><a href="nosotros.html">NOSOTROS</a></li>
-								<li><a href="servicios.html">SERVICIOS</a></li>
-								<li><a href="ubicacion.html">UBICACIÓN</a></li>
-								<li><a href="contacto.html">CONTACTO</a></li>
+								<li><a href="index.php">INICIO</a></li>
+								<li><a href="nosotros.php">NOSOTROS</a></li>
+								<li><a href="servicios.php">SERVICIOS</a></li>
+								<li><a href="ubicacion.php">UBICACIÓN</a></li>
+								<li><a href="contacto.php">CONTACTO</a></li>
 							</ul>
 						</nav>
 						
@@ -54,17 +69,7 @@
 			<img src="imagenes/bienvenidos.jpg"  width='342' height='342' title='bienvenidos'>
 		</figure>
 		<h1>PRODUCCION DE EVENTOS</h1>
-		<P>Bienvenidos a "Backstage Producciones" de texto. ha sido el texto de relleno
-		estándar de las industrias desde el año 1500, cuando un impresor N. del T.persona que se dedica a la imprenta
-		desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen
-		No sólo sobrevivió 500 naños, sino que tambien ingresó como texto de relle no en documentos electrónicos
-		quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset"
-		as cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición
-		como por ejemplo Aldus PageMaker el cual  Lorem Ipsum.<br>
-		</br>No sólo sobrevivió 500 naños, sino que tambien ingresó como texto de relle no en documentos electrónicos
-		quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset"
-		as cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición
-		como por ejemplo Aldus PageMaker el cual  Lorem Ipsum.
+		<P><?php echo $descripcion; ?>
 		</P>
 		<figure id="separador">
 			<img src="imagenes/separador2.png">
@@ -74,7 +79,7 @@
 	<div id="contenedordestacado">
 
 		<article class="destacado">
-			<h2>EMPRESAS</h2>
+			<h2><?php echo $destacado1; ?></h2>
 			<a href="servicios.php">
 				<figure class="foto_destacados">
 					<img src="imagenes/destacado1.jpg"width='260' height='260'>
@@ -83,14 +88,11 @@
 			<figure>
 				<img src="imagenes/separador3.png">
 			</figure>
-			<p>Nos especializamos en de texto de relleno
-			imprentas y archivos de texto. ha sido el texto
-			estándar de las industrias desde cuando un
-			desconocido usó una galería de textos.</p>
+			<p><?php echo $desdestacado1;  ?></p>
 		</article>
 
 		<article class="destacado">
-			<h2>MATRIMONIOS</h2>
+			<h2><?php echo $destacado2; ?></h2>
 			<a href="servicios.php">
 				<figure class="foto_destacados">
 					<img src="imagenes/destacado2.jpg" width='260' height='260'>
@@ -99,14 +101,11 @@
 			<figure>
 				<img src="imagenes/separador3.png">
 			</figure>
-			<p>Nos especializamos en de texto de relleno
-			imprentas y archivos de texto. ha sido el texto
-			estándar de las industrias desde cuando un
-			desconocido usó una galería de textos.</p>
+			<p><?php echo $desdestacado2;  ?></p>
 		</article>
 
 		<article class="destacado">
-			<h2>CATERING</h2>
+			<h2><?php echo $destacado3; ?></h2>
 			<a href="servicios.php">
 				<figure class="foto_destacados">
 					<img src="imagenes/destacado3.jpg" width='260' height='260'>
@@ -115,10 +114,7 @@
 			<figure>
 				<img src="imagenes/separador3.png">
 			</figure>
-			<p>Nos especializamos en de texto de relleno
-			imprentas y archivos de texto. ha sido el texto
-			estándar de las industrias desde cuando un
-			desconocido usó una galería de textos.</p>
+			<p><?php echo $desdestacado3;  ?>.</p>
 		</article>
 	</div>
 	<footer>

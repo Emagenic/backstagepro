@@ -1,11 +1,13 @@
+<?php include("Conexion.php");?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Backstage Producciones</title>
 <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'/>
 <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'/>
+
 </head>
 <body>
 	<header>
@@ -20,11 +22,11 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="index.html">INICIO</a></li>
-								<li><a href="nosotros.html">NOSOTROS</a></li>
-								<li><a href="servicios.html">SERVICIOS</a></li>
-								<li><a href="ubicacion.html">UBICACIÓN</a></li>
-								<li><a href="contacto.html">CONTACTO</a></li>
+								<li><a href="index.php">INICIO</a></li>
+								<li><a href="nosotros.php">NOSOTROS</a></li>
+								<li><a href="servicios.php">SERVICIOS</a></li>
+								<li><a href="ubicacion.php">UBICACIÓN</a></li>
+								<li><a href="contacto.php">CONTACTO</a></li>
 							</ul>
 						</nav>
 						
@@ -46,15 +48,29 @@
 			</div>
 		</div>
 	</header>
-
-	<article id="contenedor_ubicacion">
-		<h1>UBICACIÓN</h1>
-		<iframe id="contenido_ubicacion" width="1000" height="400" frameborder="0" scrolling="no" 				marginheight="0" marginwidth="0" src="https://maps.google.cl/maps?f=q&		amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=rancagua+centro&amp;aq=&amp;	sll=-34.175098,-70.711098&amp;sspn=0.040973,0.084543&amp;ie=UTF8&amp;hq=	&amp;hnear=Rancagua,+Provincia+de+Cachapoal,+Regi%C3%B3n+del+Libertador+	General+Bernardo+O'Higgins&amp;t=m&amp;ll=-34.168068,-70.738907&amp;		spn=0.056813,0.17149&amp;z=13&amp;iwloc=A&amp;output=embed">
-		</iframe>
-		<small><a href="https://maps.google.cl/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=rancagua+centro&amp;aq=&amp;sll=-34.175098,-70.711098&amp;sspn=0.040973,0.084543&amp;ie=UTF8&amp;hq=&amp;hnear=Rancagua,+Provincia+de+Cachapoal,+Regi%C3%B3n+del+Libertador+General+Bernardo+O'Higgins&amp;t=m&amp;ll=-34.168068,-70.738907&amp;spn=0.056813,0.17149&amp;z=13&amp;iwloc=A" target="new">MAPA GRANDE</a>
-		</small>
+	<article id="contenedor_servicios">
+		<h1>SERVICIOS</h1>
 	</article>
 
+	<div id="contenedordestacado">
+<?php 
+$listado = "select * from  servicios";
+$sentencia = mysql_query($listado,$conn);
+while($rs=mysql_fetch_array($sentencia,$mibase)){
+?>
+		<article class="destacado">
+			<h2><?php $texto = str_replace("\r\n","<br>",$rs["titulo"]); echo $texto ?></h2>
+				<figure class="foto_destacados">
+					<img src="imagenes/servicios/<?php echo $rs["id"]; ?>.jpg"width='260' height='260'>
+				</figure>
+			<figure>
+				<img src="imagenes/separador3.png">
+			</figure>
+			<p><?php $texto = str_replace("\r\n","<br>",$rs["descripcion"]); echo $texto ?></p>
+		</article>
+<?php } ?>
+
+	</div>
 	<footer>
 		<aside id="contenedor_footer">
 			<p>Todos los Derechos reservados a:  BackStage Producciones<br>
@@ -71,4 +87,5 @@
 	<script type="text/javascript" src="js/script.js"></script>
 
 </body>	
+</html>
 </html>
